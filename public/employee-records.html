@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+  <title>Employee Records Management</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+</head>
+<body class="bg-purple-200">
+    <nav class="bg-gray-200 shadow-lg">
+        <div class="max-w-6xl mx-auto px-2">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <!-- Website Logo -->
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <img src="images/hr_user.png" alt="Logo" class="h-8 w-8 mr-2" />
+                            <span class="font-semibold text-gray-500 text-lg">HR Management</span>
+                        </a>
+                    </div>
+                    <div class="flex space-x-2 items-center"> <!-- Added items-center for vertical alignment -->
+                        <input type="text" placeholder="Search..." class="px-2 py-1 w-96 rounded-md border border-gray-300 focus:outline-none focus:ring focus:border-blue-400" />
+                        <button class="px-2 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600">Search</button>
+                    </div>
+                    <div class="flex justify-start"> <!-- Added justify-between to move user profile to the right -->
+                        <a href="#" class="flex items-center py-4 px-2 hover:bg-green-600">
+                            <span class="font-semibold text-gray-500 text-lg mr-2">User Profile</span> <!-- Swap the order with the image -->
+                            <img src="images/avatar.png" alt="Logo" class="h-8 w-8" />
+                        </a>
+                    </div>
+                    
+
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    <div class="flex">
+        <!--Side Navbar-->
+        <div class="bg-purple-800 w-64 ">
+            
+            
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/avatar.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Personal Information</a>
+
+                </div>
+            </div>
+
+
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/customers.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Employment Information</a>
+
+                </div>
+            </div>
+
+
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/experience.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Qualifications and Skills</a>
+
+                </div>
+            </div>
+
+
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/clipboard.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Performance and Appraisals</a>
+                </div>
+            </div>
+
+
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/calendar.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Attendance and Leave Management</a>
+
+                </div>
+            </div>
+
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/assets.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Payroll and Compensation</a>
+
+                </div>
+            </div>
+
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/benefits.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Benefits and Insurance</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/portfolio.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">HR Documents</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/exit.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Termination and Exit</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/emergency-call.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">
+                        <a href="your-link-here">Emergency Contacts</a>
+                    </a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/history.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Work History</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/certificate.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Training and Certifications</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/capital.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Company Assets</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/compliant.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Compliance and Legal</a>
+                </div>
+            </div>
+           
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/audit.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Audit Trail</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/access-control.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">User Access Control</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/report.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Reporting and Analytics</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/folder-management.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Document Management</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/notification-bell.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Reminders and Notifications</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/private-key.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">Security and Privacy</a>
+                </div>
+            </div>
+            <div class="flex m-5 mt-2 border-t-0 border-b-2 border-r-0 border-gray-300 rounded-lg p-1">
+                <div>
+                    <img class="w-5 h-5" src="images/technical-support.png" alt="">
+                </div>
+                <div class="mx-3 text-sm text-gray-100 flex items-center">
+                    <a href="your-link-here">User Training and Support</a>    
+                </div>
+                
+            </div>
+            
+        </div>
+        <!--Side Navbar-->
+
+        <!--Main area-->
+
+        <div class="flex-1">
+            
+
+
+            <!--site banner-->
+            <div class="bg-indigo-200 m-7 p-6">
+                <div class="text-4xl text-gray-800 font-medium">Good Morning, Super Inc.👋</div>
+                <div class="mt-4">These are the stats for today, have a good day</div>
+            </div>
+            <!--site banner-->
+
+            <div class="card-container flex m-7 space-x-6 ">
+                <div class="card w-1/2 bg-white p-4">
+                    <div><img src="images/wallet.png" class="w-10 h-10" alt=""></div>
+                    <div class="font-bold text-xl text-gray-700">Super plus</div>
+                    <div class="uppercase mt-3 mb-3 font-bold text-sm text-gray-400">Sales</div>
+                    <span class="font-bold text-3xl">$25,647</span>
+                    <span class="bg-green-500 text-white p-1 rounded-full text-sm font-bold align-text-top">+58%</span>
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="card w-1/2 bg-white p-4">
+                    <div><img src="images/wallet.png" class="w-10 h-10" alt=""></div>
+                    <div class="font-bold text-xl text-gray-700">Super plus</div>
+                    <div class="uppercase mt-3 mb-3 font-bold text-sm text-gray-400">Sales</div>
+                    <span class="font-bold text-3xl">$25,647</span>
+                    <span class="bg-red-500 text-white p-1 rounded-full text-sm font-bold align-text-top">-9%</span>
+                    <canvas id="chart2"></canvas>
+
+                </div>
+            </div>
+
+
+            <div class="card-container flex m-7 space-x-6 ">
+                <div class="card w-1/2 bg-white p-4">
+                    <div><img src="images/wallet.png" class="w-10 h-10" alt=""></div>
+                    <div class="font-bold text-xl text-gray-700">Super plus</div>
+                    <div class="uppercase mt-3 mb-3 font-bold text-sm text-gray-400">Sales</div>
+                    <span class="font-bold text-3xl">$25,647</span>
+                    <span class="bg-green-500 text-white p-1 rounded-full text-sm font-bold align-text-top">+58%</span>
+                    <canvas id="chart3"></canvas>
+                </div>
+                <div class="card w-1/2 bg-white p-4">
+                    <div><img src="images/wallet.png" class="w-10 h-10" alt=""></div>
+                    <div class="font-bold text-xl text-gray-700">Super plus</div>
+                    <div class="uppercase mt-3 mb-3 font-bold text-sm text-gray-400">Sales</div>
+                    <span class="font-bold text-3xl">$25,647</span>
+                    <span class="bg-red-500 text-white p-1 rounded-full text-sm font-bold align-text-top">-9%</span>
+                    <canvas id="chart4"></canvas>
+
+                </div>
+            </div>
+
+            <div class="card-container flex m-7 space-x-6 ">
+                <div class="bg-white w-1/3 p-4 divide-y divide-gray-200">
+                    <div class="font-bold text-l pb-4">Top Countries</div>
+                    <canvas class="pt-4" id="chart5"></canvas>
+                </div>
+                <div class="bg-white w-2/3 p-4">
+                    <div class="font-bold text-l pb-4">Top Channels</div>
+                    <div class="flex bg-gray-100 text-gray-500 p-2 uppercase font-bold text-xs">
+                        <div class="w-1/3">
+                            <div>Source</div>
+                        </div>
+                        <div class="w-3/4 flex space-x-14">
+                            <div>Visitors</div>
+                            <div>Revenues</div>
+                            <div>Sales</div>
+                            <div>Conversion</div>
+                        </div>
+                    </div>
+
+                    <div class="multi-channel-container divide-y divide-gray-200">
+                        <div class="single-channel pt-2 pb-2">
+                            <div class="flex">
+                                <div class="w-1/3">
+                                    <div class="image-text flex">
+                                        <div>
+                                            <img src="images/youtube.png" class="w-8 h-8" alt="">
+                                        </div>
+                                        <div class="pl-2 pt-1">YouTube</div>
+                                    </div>
+                                </div>
+                                <div class="w-3/4 flex space-x-16">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="single-channel pt-2 pb-2">
+                            <div class="flex">
+                                <div class="w-1/3">
+                                    <div class="image-text flex">
+                                        <div>
+                                            <img src="images/facebook.png" class="w-8 h-8" alt="">
+                                        </div>
+                                        <div class="pl-2 pt-1">Facebook</div>
+                                    </div>
+                                </div>
+                                <div class="w-3/4 flex space-x-16">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="single-channel pt-2 pb-2">
+                            <div class="flex">
+                                <div class="w-1/3">
+                                    <div class="image-text flex">
+                                        <div>
+                                            <img src="images/github.png" class="w-8 h-8" alt="">
+                                        </div>
+                                        <div class="pl-2 pt-1">Github</div>
+                                    </div>
+                                </div>
+                                <div class="w-3/4 flex space-x-16">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="single-channel pt-2 pb-2">
+                            <div class="flex">
+                                <div class="w-1/3">
+                                    <div class="image-text flex">
+                                        <div>
+                                            <img src="images/instagram.png" class="w-8 h-8" alt="">
+                                        </div>
+                                        <div class="pl-2 pt-1">Instagram</div>
+                                    </div>
+                                </div>
+                                <div class="w-3/4 flex space-x-16">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="single-channel pt-2 pb-2">
+                            <div class="flex">
+                                <div class="w-1/3">
+                                    <div class="image-text flex">
+                                        <div>
+                                            <img src="images/facebook.png" class="w-8 h-8" alt="">
+                                        </div>
+                                        <div class="pl-2 pt-1">Facebook</div>
+                                    </div>
+                                </div>
+                                <div class="w-3/4 flex space-x-16">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="single-channel pt-2 pb-2">
+                            <div class="flex">
+                                <div class="w-1/3">
+                                    <div class="image-text flex">
+                                        <div>
+                                            <img src="images/github.png" class="w-8 h-8" alt="">
+                                        </div>
+                                        <div class="pl-2 pt-1">Github</div>
+                                    </div>
+                                </div>
+                                <div class="w-3/4 flex space-x-16">
+                                    <div>2.4k</div>
+                                    <div class="text-green-500">$16,000</div>
+                                    <div>340</div>
+                                    <div class="text-blue-500">4.9%</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Main area-->
+    </div>
+
+    <script>
+        var ctx = document.getElementById('chart1').getContext('2d');
+        var ctx2 = document.getElementById('chart2').getContext('2d');
+        var ctx3 = document.getElementById('chart3').getContext('2d');
+        var ctx4 = document.getElementById('chart4').getContext('2d');
+        var ctx5 = document.getElementById('chart5').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+                datasets: [{
+                    label: 'Number of sales',
+                    data: [1, 2, 3, 4, 5, 6],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+        var myChart2 = new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+                datasets: [{
+                    label: 'Number of sales',
+                    data: [11, 22, 13, 74, 105, 6],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+        var myChart3 = new Chart(ctx3, {
+            type: 'doughnut',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+                datasets: [{
+                    label: 'Number of sales',
+                    data: [1, 2, 3, 4, 5, 6],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+        var myChart4 = new Chart(ctx4, {
+            type: 'radar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+                datasets: [{
+                    label: 'Number of sales',
+                    data: [1, 2, 3, 4, 5, 6],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+        var myChart5 = new Chart(ctx5, {
+            type: 'doughnut',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+                datasets: [{
+                    label: 'Number of sales',
+                    data: [1, 2, 3, 4, 5, 6],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+
+                }
+            }
+        });
+    </script>
+</body>
+</html>
